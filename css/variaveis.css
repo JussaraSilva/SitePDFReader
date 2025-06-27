@@ -1,0 +1,217 @@
+  :root{
+  /* === Fontes === */
+  --font-escala: 1;
+
+  --font-titulo-familia: 'Merriweather', serif;
+  --font-ui-familia: 'Poppins', sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --font-titulo-grande: calc(3rem * var(--font-escala));    /* ~32px */
+  --font-titulo-medio: calc(1.5rem * var(--font-escala));    /* ~24px */
+  --font-titulo-pequeno: calc(1.25rem * var(--font-escala)); /* ~20px */
+  --font-texto-normal: calc(1rem * var(--font-escala));      /* ~16px */
+  --font-texto-pequeno: calc(0.875rem * var(--font-escala)); /* ~14px */
+  /* === Espaçamentos === */
+  --espaco-xs: 0.25rem;
+  --espaco-sm: 0.5rem;
+  --espaco-md: 1rem;
+  --espaco-lg: 1.5rem;
+  --espaco-xl: 2rem;
+
+  /* === Bordas e Radius === */
+  --radius-botao: 0.375rem;
+  --radius-input: 0.375rem;
+  --radius-card: 0.5rem;
+
+  /* === Dimensões Comuns === */
+  --largura-maxima-container: 1400px;
+  --largura-sidebar: 280px;
+
+  /* === Buttons */
+  --btn-bg-white:#fff;
+
+  --btn-bg-black:#2C2C2C;
+
+
+  /* === Buttons Hover */
+  --btn-hover-back-login:#179b05;
+  --btn-hover-back-cadastro:#0057ff;
+  --btn-hover-text:#fff;
+
+
+
+  --btn-hover-azulLink: #026092;
+
+    --cor-cinza-sombra:#ddd;
+
+  /* === Cores Icon==*/
+  --cor-icon-cinza:#262626;
+
+  --btn-hover-like: #006eff;
+  --btn-hover-dislike: #ff1e00c7;
+
+  --accent-color: #f78c00; /* laranja estiloso */
+
+
+  --toggle-bg: hsl(48,90%,85%);
+  --toggle-circle: hsl(48,90%,55%);
+  --toggle-checked-bg: hsl(198,90%,15%);
+  --toggle-checked-circle: hsl(198,90%,55%);
+  --icon-glow: hsl(0,0%,100%);
+
+
+  --cor-amarelo-padrao:#e9a209;
+
+  --swiper-pagination-bullet-inactive-opacity: 0.4;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+  --swiper-pagination-bullet-border-radius: 8px;
+
+
+/* === Cores padrão texto e formas */
+  --cor-branco-padrao:#fff;
+  --cor-preto-padrao:#000;
+  --cor-branco-secondary:#fafafa;
+
+
+  /*=== Cores de Links ===*/
+
+  --cor-text-link-azul:#1a73e8;
+  --cor-text-link-branco:#fff;
+  --cor-text-link-cinza:#D9D9D9;
+
+  --cor-text-link-azulClaro:#079afc;
+  --cor-text-link-azulEscuro:#0740fc;
+
+}
+
+
+:root[data-theme='light']  {
+
+  /* === Cores de Fundo === */
+  --bg-site: #fff;
+  --black-color-padrao:#000;
+  --bg-secao-padrao: #f5f5f5;
+  --bg-header: #ffffff;
+  --bg-footer: #f9f9f9;
+  --bg-card-livro: #fafafa;
+  --bg-painel-leitura: #f0f2f5;
+  --bg-hover-item: #e6e6e6;
+  --bg-botao-primario: #1a73e8;/*Botão de login e cadastro do main*/
+  --bg-botao-secundario: #e8f0fe; /*Botão de login e cadastro do main*/
+  --bg-botao-terceario: #e8f0fe; /*Botão de login e cadastro do main*/
+
+
+
+/* Estilos do swiper*/
+
+  --swiper-pagination-color: #1a73e8; /* cor da bolinha ativa */
+  --swiper-pagination-bullet-inactive-color: #ccc;
+
+
+  --VarGradient-color: linear-gradient(135deg, #0891f3 50%, #ffffff 50%);
+
+
+  --cor-cinza-escuro-iconUser:#333;
+
+  --cor-borda-perfil:#f2f2f2;
+
+  --text-description-color:yellow;
+
+
+  /* === Cores de Texto === */
+  --text-titulo-principal: #202124;
+  --text-corpo: #2c2e31;
+  --text-inativo: #9aa0a6;
+  --text-destaque: #1a73e8;
+  --text-botao-secundario: #031c3d;
+  --text-link: #1a73e8;
+
+  --text-color-escuro:#130909;
+
+  /* === Cores de Bordas === */
+  --border-input-padrao: #D9D9D9;
+  --border-campo: #c0c0c0;
+  --border-campo-focus: #1a73e8;
+  --border-card-livro: #e0e0e0;
+  --border-divisor: #dcdcdc;
+
+
+  /* === Sombreamento === */
+  --box-shadow-botao: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-card-livro: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --box-shadow-modal: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover:0 20px 30px rgba(0, 0, 0, 0.2);
+
+
+  /* === Transparência === */
+  --input-bg-transparente:#d9d9d94a;
+  --fundo-campo-comentario:#e0e0e02e;
+}
+
+
+:root[data-theme="dark"] {
+  /* === Cores de Fundo === */
+  --bg-site: #000000;
+  --bg-secao-padrao: #1e1e1e;
+  --bg-header: #1a1a1a;
+  --bg-footer: #424242;
+  --bg-card-livro: #2a2a2a;
+  --bg-painel-leitura: #1c1c1c;
+  --bg-input: #2b2b2b;
+  --bg-modal: #2f2f2f;
+  --bg-hover-item: #333333;
+
+  --accent-color: #f78c00; /* mantém a mesma no dark */
+
+  /* === Cores de Texto === */
+  --text-titulo-principal: #e8eaed;
+  --text-corpo: #dde6f0;
+  --text-inativo: #5f6368;
+  --text-botao-primario: #000000;
+  --text-botao-secundario: #09418b;
+
+  /* === Bordas === */
+  --border-campo: #444444;
+  --border-card-livro: #3c4043;
+  --border-divisor: #3a3a3a;
+
+  /* === Sombras === */
+  --box-shadow-botao: 0 2px 4px rgba(20, 20, 20, 0.918);
+  --box-shadow-card-livro: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --box-shadow-modal: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+  /* === Botões === */
+  --bg-botao-primario: #f78c00;
+  --bg-botao-secundario: #2c2c2c;
+  --bg-botao-terceario: #f78c00; /*Botão de visualizar e capitulos*/
+
+  --toggle-bg: hsl(198,90%,15%);
+  --toggle-circle: hsl(198,90%,55%);
+  --icon-glow: hsl(0,0%,100%);
+
+  --fundo-campo-comentario:#fffefe27;
+
+  --text-description-color:#ca7403e7;
+
+
+  --swiper-pagination-color: #f78c00; /* cor da bolinha ativa */
+  --swiper-pagination-bullet-inactive-color: #fff;
+
+  --VarGradient-color: linear-gradient(135deg, #fff 50%, #0785df79 50%);
+
+  --text-color-escuro:#140404;
+
+  --cor-borda-perfil:#0e0e0e;
+}
+
+
+
+
+

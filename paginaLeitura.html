@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LitVerse - American Idiot</title>
+  <!-- Ícone da página -->
+  <link rel="shortcut icon" href="./assets/favicon.png">
+  <!-- CDN FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CDN Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!----- Css reset, normalize, variaveis e style -->
+
+  <link rel="stylesheet" href="./css/variaveis.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-------Library PDF.js------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.4.120/build/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.3.93/epub.min.js"></script>
+
+</head>
+
+<body data-pagina="leitura">
+  <main class="main pagina-leitura-main">
+    <div class="pagina-leitura-container">
+
+      <!-- Sidebar de capítulos -->
+      <div class="acionar-menu">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+
+      <aside class="pagina-leitura-sidebar">
+        <section class="sidebar-header-leitura">
+          <div class="menu-toogle">
+            <div class="nome-do-livro">
+              <span>American Idiot</span>
+            </div>
+            <div class="icon-perfil">
+              <a href="perfil.html">
+                <img src="./assets/profile-picture/profile-1.jpg" alt="">
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="capitulos">
+          <h3>Capítulos</h3>
+          <ul class="pagina-leitura-lista">
+            <li class="pagina-leitura-capitulo">
+              <div class="pagina-leitura-capitulo-header">
+                <span>Capítulo 1</span>
+                <button class="pagina-leitura-toggle">
+                  <i class="fa-solid fa-circle-chevron-down"></i>
+                </button>
+              </div>
+              <!-- <ul class="pagina-leitura-subpaginas">
+                <li>
+                  <a href="#" class="link-página">
+                    <span class="nome-subpagina" title="A Carta">A Carta</span>
+                    <span class="numero-pagina">01</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-página">
+                    <span class="nome-subpagina" title="Me olha nos olhos e diz">Me olha nos olhos e diz</span>
+                    <span class="numero-pagina">02</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-página">
+                    <span class="nome-subpagina" title="Insegurança">Insegurança</span>
+                    <span class="numero-pagina">03</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="link-página">
+                    <span class="nome-subpagina" title="A Primeira Namorada">A Primeira Namorada</span>
+                    <span class="numero-pagina">04</span>
+                  </a>
+                </li>
+              </ul> -->
+            </li>
+
+            <li class="pagina-leitura-capitulo">
+              <div class="pagina-leitura-capitulo-header">
+                <span>Capítulo 2</span>
+                <button class="pagina-leitura-toggle">
+                  <i class="fa-solid fa-circle-chevron-down"></i>
+                </button>
+              </div>
+              <!-- <ul class="pagina-leitura-subpaginas">
+                <li>Página 5</li>
+                <li>Página 6</li>
+                <li>Página 7</li>
+              </ul> -->
+            </li>
+
+            <li class="pagina-leitura-capitulo">
+              <div class="pagina-leitura-capitulo-header">
+                <span>Capítulo 3</span>
+                <button class="pagina-leitura-toggle">
+                  <i class="fa-solid fa-circle-chevron-down"></i>
+                </button>
+              </div>
+              <!-- <ul class="pagina-leitura-subpaginas">
+                <li>Página 8</li>
+                <li>Página 9</li>
+                <li>Página 10</li>
+              </ul> -->
+            </li>
+
+            <li class="pagina-leitura-capitulo">
+              <div class="pagina-leitura-capitulo-header">
+                <span>Capítulo 4</span>
+                <button class="pagina-leitura-toggle">
+                  <i class="fa-solid fa-circle-chevron-down"></i>
+                </button>
+              </div>
+              <!-- <ul class="pagina-leitura-subpaginas">
+                <li>Página 11</li>
+                <li>Página 12</li>
+                <li>Página 13</li>
+                <li>Página 14</li>
+              </ul> -->
+            </li>
+
+            <li class="pagina-leitura-capitulo">
+              <div class="pagina-leitura-capitulo-header">
+                <span>Capítulo 5</span>
+                <button class="pagina-leitura-toggle">
+                  <i class="fa-solid fa-circle-chevron-down"></i>
+                </button>
+              </div>
+              <!-- <ul class="pagina-leitura-subpaginas">
+                <li>Página 15</li>
+                <li>Página 16</li>
+                <li>Página 17</li>
+                <li>Página 18</li>
+              </ul> -->
+            </li>
+
+          </ul>
+        </section>
+      </aside>
+
+      <!-----  Nav bar menu Hidden -->
+
+
+      <!-- Conteúdo principal -->
+      <section class="pagina-leitura-conteudo">
+
+        <nav class="menu-hidden-leitura">
+          <div class="menu-oculto-page-leitura">
+            <ul class="menu-leitura">
+              <a href="paginaInicial.html">
+                <li class="page-home item-leitura">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Home</span>
+                </li>
+              </a>
+              <a href="biblioteca.html">
+                <li class="page-biblioteca item-leitura">
+                  <i class="fa-solid fa-book-open-reader"></i>
+                  <span>Biblioteca</span>
+                </li>
+              </a>
+              <a href="perfil.html">
+                <li class="page-perfil item-leitura">
+                  <span class="material-icons-round">account_circle</span>
+                  <span>Perfil</span>
+                </li>
+              </a>
+            </ul>
+          </div>
+          <div class="trigger-menu-leitura">
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+        </nav>
+
+
+
+        <div class="pagina-leitura-controles">
+
+  <!-- Botão Página Anterior -->
+          <button class="pagina-anterior btn-back" id="prev-page">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+            <span>Página Anterior</span>
+          </button>
+          <span class="page-info">
+                  Página <span id="current-page">1</span> de <span id="total-pages">0</span>
+          </span>
+  <!-- Centro: Tema + Acessibilidade -->
+          <div class="grupo-centro">
+            <div class="toggle-switch">
+              <label for="theme" class="theme">
+                <span>Light</span>
+                <span class="theme__toggle-wrap">
+                  <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                  <span class="theme__fill"></span>
+                  <span class="theme__icon">
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                  </span>
+                </span>
+                <span>Dark</span>
+              </label>
+            </div>
+          <div class="controle-fonte">
+            <button id="diminuirFonte" alt="Diminuir Fonte" class="btn">A-</button>
+            <button id="aumentarFonte" alt="Aumentar Fonte" class="btn">A+</button>
+          </div>
+        </div>
+        </div>
+
+<!-- Botão Próxima Página Flutuante -->
+      <a href="#" class="btn-proxima-flutuante" id="next-page">
+          <span>Próxima Página</span>
+          <i class="fa-solid fa-circle-arrow-right"></i>
+      </a>
+
+
+
+        <header class="pagina-leitura-header">
+          <div class="papel-de-parede-leitura">
+          </div>
+          <h1 class="pagina-leitura-titulo" id="tituloLivro"></h1>
+          <span class="pagina-leitura-autor">por <strong id="autorLivro"></strong></span>
+          <p id="descricaoLivro" class="descricao-livro-leitura"></p>
+          <div id="pdf-access-control">
+            <button id="btn-bypass-cors" class="btn btn-warning">
+              <i class="fas fa-unlock-alt"></i>
+              <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">Permitir Acesso Temporário ao PDF</a>
+            </button>
+            <p class="small-text">Clique se o PDF não carregar automaticamente</p>
+          </div>
+        </header>
+
+        <!---Botão Proxima Pagina ------------------------------->
+
+        <!---Fim Botão Proxima Pagina ------------------------------->
+        <article class="pagina-leitura-artigo">
+          <span class="corpo-leitura">
+            <div id="pdf-viewer-container">
+              <div id="pdf-viewer"></div>
+            </div>
+          </span>
+        </article>
+      </section>
+    </div>
+  </main>
+
+
+
+  <script src="./js/leitura.js"></script>
+  <script src="./js/personalizacao.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

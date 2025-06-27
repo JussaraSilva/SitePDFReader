@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LitVerse - Cadastro de usuário</title>
+  <!-- Ícone da página -->
+  <link rel="shortcut icon" href="./assets/favicon.png">
+  <!-- CDN FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CDN Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/variaveis.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+      <a href="index.html" class="logo-link">
+    <!-- Camada base (visível em ambos os temas) -->
+        <img src="./assets/logoPNG.png" alt="Logo" class="logo-img logo-base" />
+    <!-- Camada para dark mode (só aparece com data-theme='dark') -->
+        <img src="./assets/LogoLaranjaTransparente.png" alt="Logo" class="logo-img logo-blend">
+      </a>
+    </div>
+      <nav class="nav-links">
+        <div class="botoes">
+          <button class="btn login">
+            <a href="login.html">
+              Login
+            </a>
+          </button>
+          <button class="btn cadastrar">
+            <a href="cadastro.html">
+              Cadastrar
+            </a>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="formulario-cadastro">
+      <div class="container-cadastro">
+        <div class="header-container">
+          <div class="header-form">
+            <div class="logo-form">
+
+              <img src="./assets/favicon.png" alt="">
+            </div>
+            <div class="title-form">
+              <span class="formTitle">
+                <h3>Preencha para fazer seu Cadastro</h3>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-container">
+          <form class="cadastro-form" method="post">
+            <div class="input-nome input-form">
+              <input type="text" id="nome" placeholder="Nome" />
+            </div>
+            <div class="input-email input-form">
+              <input type="email" id="email" placeholder="E-mail" />
+            </div>
+            <div class="input-senha input-form">
+              <input type="password" id="senha" placeholder="Senha" />
+            </div>
+            <div class="input-senha input-form">
+              <input type="password" id="senha" placeholder="Confirme sua senha""/>
+                  </div>
+
+                    <a class=" cadastro-user btn" href="login.html">
+              Finalizar Cadastro
+              </a>
+
+              <span class="text-footer-form">Já tem uma conta?</span>
+              <span class="login-form">
+                <a href="login.html">Log In</a>
+              </span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-contact">
+        <h3>Contato</h3>
+        <form>
+          <input type="text" placeholder="Seu nome" required>
+          <input type="email" placeholder="Seu e-mail" required>
+          <textarea placeholder="Mensagem" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <div class="footer-info">
+        <h3>Informações</h3>
+        <p><strong>Endereço:</strong> Rua dos Leitores, 123 - Osasco - São Paulo</p>
+        <p><strong>Telefone:</strong> (11) 91234-5678</p>
+        <a href="#">Termos de Serviço</a>
+      </div>
+
+      <div class="footer-social">
+        <h3>Fique por dentro das Novidades</h3>
+        <div class="social-icons">
+          <ul>
+            <li class="face-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li class="twitter-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="linkedin-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="instagram-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

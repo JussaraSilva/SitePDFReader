@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LitVerse - Página Inicial</title>
+  <!-- Ícone da página -->
+  <link rel="shortcut icon" href="./assets/favicon.png">
+  <!-- CDN FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!---------------CDN Ionicons Free Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Folha de estilo com variaveis-->
+  <link rel="stylesheet" href="./css/variaveis.css" />
+  <!--Folha de estilo padrão-->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!--Fonte Merriweather e Poppins -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+  <header class="container header-biblioteca">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+    <!-- Camada base (visível em ambos os temas) -->
+        <img src="./assets/logoPNG.png" alt="Logo" class="logo-img logo-base" />
+    <!-- Camada para dark mode (só aparece com data-theme='dark') -->
+        <img src="./assets/LogoLaranjaTransparente.png" alt="Logo" class="logo-img logo-blend" />
+      </a>
+    </div>
+
+
+
+    <nav class="header-menu">
+      <ul class="menu-header">
+        <li class="pagina-inicial menu-page">
+          <a href="paginaInicial.html">
+            <span class="icon-menu icon-page-home">
+              <i data-lucide="home"></i>
+            </span>
+            <span class="text">Página Inicial</span>
+          </a>
+        </li>
+        <li class="pagina-biblioteca menu-page">
+          <a href="biblioteca.html">
+            <span class="icon-menu icon-page-biblioteca">
+              <i data-lucide="library-big"></i>
+            </span>
+            <span class="text">Biblioteca</span>
+          </a>
+        </li>
+        <li class="pagina-perfil menu-page">
+          <a href="perfil.html">
+            <span class="icon-menu icon-page-perfil">
+              <i data-lucide="user-round-pen"></i>
+            </span>
+            <span class="text">Perfil</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="usuario-config">
+      <button class="btn-notificacoes" id="btnNotific">
+        <i data-lucide="bell-ring"></i>
+      </button>
+
+      <!-- ▼ NOVO dropdown de notificações -->
+      <div class="menu-notificacoes">
+        <div class="menu-notificacoes-wrapper">
+          <div class="menu-notificacoes-detalhado" id="menuNotific">
+            <div class="seta-notificacao"></div>
+            <h4>Notificações</h4>
+            <!----------------Notification Popup-->
+            <div class="notification-popup">
+              <div class="notificacao1 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-2.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Keke Benjamin</b> está seguindo você.
+                  <small class="text-muted">2 dias atrás</small>
+                </div>
+              </div>
+              <div class="notificacao2 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-3.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>John Doe</b> and <b>283 outros</b> comentaram seu post.
+                  <small class="text-muted">1 hora atrás</small>
+                </div>
+              </div>
+              <div class="notificacao3 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-4.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Jack Daniels</b> comentou no seu post.
+                  <small class="text-muted">1 segundo atrás.</small>
+                </div>
+              </div>
+              <div class="notificacao4 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-5.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Madaleine Bostick</b> está seguindo você.
+                  <small class="text-muted">1 semana atrás</small>
+                </div>
+              </div>
+              <div class="notificacao5 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-6.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Mary Jane</b> respondeu seu comentário.
+                  <small class="text-muted">3 dias atrás</small>
+                </div>
+              </div>
+              <div class="notificacao6 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-7.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Iron Man</b> marcou você em um comentário.
+                  <small class="text-muted">8 dias atrás</small>
+                </div>
+              </div>
+            </div>
+            <!--------End Notification Popup---------------->
+          </div>
+        </div>
+      </div>
+      <!-- ▲ Fim do novo dropdown -->
+
+      <button class="btn-config" id="btnConfig">
+        <i data-lucide="bolt"></i>
+      </button>
+
+      <!-- ▼ NOVO dropdown de configurações ▼ -->
+      <div class="menu-config-detalhado" id="menuConfig">
+        <h4>Configurar Página</h4>
+        <div class="menu-lateral">
+          <button><i class="fas fa-adjust"></i> Alternar Tema</button>
+          <button><i class="fas fa-font"></i> Ajustar Fonte</button>
+          <button><i class="fas fa-language"></i> Idioma</button>
+        </div>
+      </div>
+      <!-- ▲ Fim do novo dropdown -->
+
+      <!-- Dropdown do usuário -->
+      <div class="dropdown-usuario">
+        <img src="./assets/icons-cards/user-picture.png" alt="Usuário" class="foto-perfil" id="btnUsuario">
+        <div class="menu-usuario-detalhado" id="menuUsuario">
+          <div class="perfil-topo">
+            <img src="./assets/icons-cards/user-picture.png" alt="Foto do Usuário">
+            <h4>Jussara Cristina</h4>
+            <p>jussara@email.com</p>
+            <a href="perfil.html">Ver perfil</a>
+          </div>
+          <div class="menu-lateral">
+            <button><i class="fas fa-user"></i> Conta</button>
+            <button><i class="fas fa-key"></i> Trocar Senha</button>
+            <button><i class="fas fa-lock"></i> Privacidade</button>
+            <button><i class="fas fa-trash"></i> Excluir Conta</button>
+          </div>
+          <button class="btn-atualizar">Atualizar Conta</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="visual-livro">
+
+    <!---------------------------------Drawer que aparece ao clicar em ver Capitulos--------------->
+    <aside id="drawerCapitulos" class="drawer-capitulos">
+      <div class="drawer-header">
+        <h3>Capítulos</h3>
+        <button id="fecharDrawer" class="btn-fechar"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul class="lista-capitulos">
+        <li>Capítulo 01 - Introdução</li>
+        <li>Capítulo 02 - Desenvolvimento</li>
+        <li>Capítulo 03 - Conclusão</li>
+        <!-- ... -->
+      </ul>
+    </aside>
+
+    <!-- Overlay -->
+    <div id="overlayDrawer" class="overlay-drawer"></div>
+
+    <!-------------------------------------Menus da header da página tela esquerda e superior------------------------
+    -------------------------------------------------------------------------------------------------------------->
+          <div class="botao-temaVoltar">
+            <div class="setinha-voltar back">
+          <i class="fa-solid fa-arrow-left"></i>
+            </div>
+
+            <div class="toggle-switch">
+            <label for="theme" class="theme">
+                <span>Light</span>
+                <span class="theme__toggle-wrap">
+                  <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                  <span class="theme__fill"></span>
+                  <span class="theme__icon">
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                  </span>
+                </span>
+                <span>Dark</span>
+            </label>
+            </div>
+          </div>
+      <!-------------------------------------------Conteúdo Principal da Página Imagem---------------------------------------->
+      <div class="hero-content-book">
+        <section class="leituras-recentes">
+          <span class="titulo-secao">
+            <h1>Leituras Recentes</h1>
+          </span>
+          <div class="carrossel-recentes">
+            <div class="swiper carrossel-container" id="carrossel">
+              <div class="swiper-wrapper">
+              <!-- Essa estrutura é criada pelo JS
+                <div class="swiper-slide item" id="container-carrossel1">
+                  <a href="#">
+                    <img src="./assets/capas-books/capa-ebook-5.png" alt="Eliana">
+                    <p>A vida da Criança</p>
+                  </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="carousel-interesses">
+          <div class="secao-interesses">
+            <div class="titulo-secao-interesse">
+              <h1>Você pode Gostar</h1>
+            </div>
+            <div class="swiper swiper-gostar">
+              <div class="swiper-wrapper">
+                <!-- Esse estrutura é criada pelo JS
+                <div class="sugestao-livro-destaque swiper-slide">
+                  <div class="imagem-destaque">
+                    <img src="./assets/capas-books/cardHome/a menina que roubava livros.jpg"
+                      alt="A Menina que Roubava Livros">
+                  </div>
+                  <div class="info-destaque">
+                    <h3>A Menina que Roubava livros</h3>
+                    <p class="autor">Markus Zusak</p>
+                    <p class="descricao">
+                      Um drama do escritor australiano Markus Zusak, publicado
+                      em 2005 pela editora Picador.
+                      The Book Thief tem como narradora a Morte, cuja função é
+                      recolher a alma de todos aqueles que morrem. Durante a
+                      sua passagem pela Alemanha, na Segunda Guerra Mundial,
+                      ela encontra a protagonista, Liesel Meminger, numa
+                      estação de comboio enquanto o seu irmão mais novo é
+                      enterrado próximo ao local.
+                    </p>
+                  </div>
+                </div> -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="carrousel-destaques">
+          <div class="secao-destaques">
+            <div class="titulo-secao-destaques">
+              <h1>Autores em Destaque</h1>
+            </div>
+
+            <div class="swiper-destaque carrossel-container autores-destaque-container" id="carrossel-autores">
+              <div class="swiper-wrapper">
+
+              <!-- Essa estrutura é criada pelo JS
+                <div class="swiper-slide item-destaque">
+                  <a href="#">
+                    <img src="./assets/autores/autor-1.jpg">
+                    <p class="nomeAutor-destaque" title="Marian Keys">Marian Keys</p>
+                    <p class="livro-autor" title="Melancia">Melancia</p>
+                  </a>
+                </div> -->
+                <!-- Adicione + autores se quiser -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-contact">
+        <h3>Contato</h3>
+        <form>
+          <input type="text" placeholder="Seu nome" required>
+          <input type="email" placeholder="Seu e-mail" required>
+          <textarea placeholder="Mensagem" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <div class="footer-info">
+        <h3>Informações</h3>
+        <p><strong>Endereço:</strong> Rua dos Leitores, 123 - Osasco - São
+          Paulo</p>
+        <p><strong>Telefone:</strong> (11) 91234-5678</p>
+        <a href="#">Termos de Serviço</a>
+      </div>
+
+      <div class="footer-social">
+        <h3>Fique por dentro das Novidades</h3>
+        <div class="social-icons">
+          <ul>
+            <li class="face-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li class="twitter-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="linkedin-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="instagram-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+  </script>
+
+
+
+  <script src="./js/script.js" defer></script>
+  <script src="./js/personalizacao.js" defer></script>
+  <script src="./js/paginaInicial.js" defer></script>
+</body>
+
+</html>

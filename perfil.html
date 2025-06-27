@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LitVerse - Meu Perfil</title>
+  <!-- Ícone da página -->
+  <link rel="shortcut icon" href="./assets/favicon.png">
+  <!-- CDN FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CDN Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Folha de estilo com variaveis-->
+  <link rel="stylesheet" href="./css/variaveis.css" />
+  <!--Folha de estilo padrão-->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!--Fonte Merriweather e Poppins -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-----Lucide Icon-->
+  <!-- Development version -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <header class="container header-biblioteca">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+    <!-- Camada base (visível em ambos os temas) -->
+        <img src="./assets/logoPNG.png" alt="Logo" class="logo-img logo-base" />
+    <!-- Camada para dark mode (só aparece com data-theme='dark') -->
+        <img src="./assets/LogoLaranjaTransparente.png" alt="Logo" class="logo-img logo-blend" />
+      </a>
+    </div>
+
+
+    <nav class="header-menu">
+      <ul class="menu-header">
+        <li class="pagina-inicial menu-page">
+          <a href="paginaInicial.html">
+            <span class="icon-menu icon-page-home">
+              <i data-lucide="home"></i>
+            </span>
+            <span class="text">Página Inicial</span>
+          </a>
+        </li>
+        <li class="pagina-biblioteca menu-page">
+          <a href="biblioteca.html">
+            <span class="icon-menu icon-page-biblioteca">
+              <i data-lucide="library-big"></i>
+            </span>
+            <span class="text">Biblioteca</span>
+          </a>
+        </li>
+        <li class="pagina-perfil menu-page">
+          <a href="perfil.html">
+            <span class="icon-menu icon-page-perfil">
+              <i data-lucide="user-round-pen"></i>
+            </span>
+            <span class="text">Perfil</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="usuario-config">
+      <button class="btn-notificacoes" id="btnNotific">
+        <i data-lucide="bell-ring"></i>
+      </button>
+
+      <!-- ▼ NOVO dropdown de notificações -->
+      <div class="menu-notificacoes">
+        <div class="menu-notificacoes-wrapper">
+          <div class="menu-notificacoes-detalhado" id="menuNotific">
+            <div class="seta-notificacao"></div>
+            <h4>Notificações</h4>
+            <!----------------Notification Popup-->
+            <div class="notification-popup">
+              <div class="notificacao1 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-2.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Keke Benjamin</b> está seguindo você.
+                  <small class="text-muted">2 dias atrás</small>
+                </div>
+              </div>
+              <div class="notificacao2 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-3.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>John Doe</b> and <b>283 outros</b> comentaram seu post.
+                  <small class="text-muted">1 hora atrás</small>
+                </div>
+              </div>
+              <div class="notificacao3 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-4.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Jack Daniels</b> comentou no seu post.
+                  <small class="text-muted">1 segundo atrás.</small>
+                </div>
+              </div>
+              <div class="notificacao4 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-5.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Madaleine Bostick</b> está seguindo você.
+                  <small class="text-muted">1 semana atrás</small>
+                </div>
+              </div>
+              <div class="notificacao5 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-6.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Mary Jane</b> respondeu seu comentário.
+                  <small class="text-muted">3 dias atrás</small>
+                </div>
+              </div>
+              <div class="notificacao6 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-7.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Iron Man</b> marcou você em um comentário.
+                  <small class="text-muted">8 dias atrás</small>
+                </div>
+              </div>
+            </div>
+            <!--------End Notification Popup---------------->
+          </div>
+        </div>
+      </div>
+      <!-- ▲ Fim do novo dropdown -->
+
+      <button class="btn-config" id="btnConfig">
+        <i data-lucide="bolt"></i>
+      </button>
+
+      <!-- ▼ NOVO dropdown de configurações ▼ -->
+      <div class="menu-config-detalhado" id="menuConfig">
+        <h4>Configurar Página</h4>
+        <div class="menu-lateral">
+          <button><i class="fas fa-adjust"></i> Alternar Tema</button>
+          <button><i class="fas fa-font"></i> Ajustar Fonte</button>
+          <button><i class="fas fa-language"></i> Idioma</button>
+        </div>
+      </div>
+      <!-- ▲ Fim do novo dropdown -->
+
+      <!-- Dropdown do usuário -->
+      <div class="dropdown-usuario">
+        <img src="./assets/icons-cards/user-picture.png" alt="Usuário" class="foto-perfil" id="btnUsuario">
+        <div class="menu-usuario-detalhado" id="menuUsuario">
+          <div class="perfil-topo">
+            <img src="./assets/icons-cards/user-picture.png" alt="Foto do Usuário">
+            <h4>Jussara Cristina</h4>
+            <p>jussara@email.com</p>
+            <a href="perfil.html">Ver perfil</a>
+          </div>
+          <div class="menu-lateral">
+            <button><i class="fas fa-user"></i> Conta</button>
+            <button><i class="fas fa-key"></i> Trocar Senha</button>
+            <button><i class="fas fa-lock"></i> Privacidade</button>
+            <button><i class="fas fa-trash"></i> Excluir Conta</button>
+          </div>
+          <button class="btn-atualizar">Atualizar Conta</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="switchtheme">
+    <div class="toggle-switch">
+            <label for="theme" class="theme">
+                <span>Light</span>
+                <span class="theme__toggle-wrap">
+                  <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                  <span class="theme__fill"></span>
+                  <span class="theme__icon">
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                  </span>
+                </span>
+                <span>Dark</span>
+            </label>
+    </div>
+  </div>
+
+  <main class="main-perfil">
+    <div class="perfil-header">
+      <img class="avatar" src="./assets/profile-picture/profile-4.jpg" alt="Avatar Carolina">
+      <div class="username">Carolina Vieira</div>
+      <div class="handle">@caroliss</div>
+      <div class="buttons-contato">
+        <a class="btn button-seguir" href="">
+          <i class="fa fa-plus"></i>
+          Seguir
+        </a>
+        <a class="btn button-contatar" href="#conversas-section">
+          <i class="fa fa-comment" aria-hidden="true"></i>
+          Mensagem
+        </a>
+      </div>
+    </div>
+    <section class="sobre-conversas">
+      <div class="tabs-perfilSocial">
+        <button class="tab-perfil perfilSobre active">
+          <i class="fa fa-user"></i> Sobre
+        </button>
+        <button class="tab-perfil perfilConversas">
+          <i class="fa fa-comments"></i> Conversas
+        </button>
+      </div>
+    </section>
+
+
+
+    <div class="list-section">
+      <section class="text-sobre">
+        <div class="info-sobre">
+          <div class="title-sobre">
+            <span>
+              Sobre Mim:
+            </span>
+          </div>
+          <div class="sobre-mim">
+            <span class="about">
+              <p class="comentario-text">
+                "(...)Somos como madressilva quando se enrola à volta do ramo da aveleira: uma vez a ela ligada e presa,
+                ambas podem durar juntas eternamente, mas, se as querem separar, a madessilva morre em pouco tempo e o
+                mesmo sucede à aveleira. Tal é o nosso caso: nem vós sem mim, nem eu sem vós!"
+              </p>
+              <span>Trecho do livro Tristão e Isolda</span>
+            </span>
+          </div>
+        </div>
+      </section>
+      <div class="list-title">Lista de Leituras<br>
+        <small>12 Livros</small>
+      </div>
+      <div class="grid">
+        <div class="book-card">
+          <img src="./assets/capas-books/capa-ebook-11.png" alt="American Idiot">
+          <div class="book-title"><a href="#">American Idiot</a></div>
+          <div class="book-autor"><a href="#">Green Day</a></div>
+          <div class="book-desc">American Idiot marcou a retomada da carreira do Green Day após um período de declínio
+            na sua popularidade. Registrou entrada nas paradas de 27 países, chegando ao topo em dezenove deles, e
+            acabou por vender dezesseis milhões de cópias mundialmente.</div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/Os sete maridos de Evelyn Hugo.png"
+            alt="Os Sete Maridos de Evelyn Hugo">
+          <div class="book-title"><a href="#">Os Sete Maridos de Evelyn Hugo</a></div>
+          <div class="book-autor"><a href="#">Taylor Jenkins Reid</a></div>
+          <div class="book-desc">”Os Sete Maridos de Evelyn Hugo” é uma obra que nos direciona aos bastidores da old
+            Hollywood, onde atrizes e atores de cinema atingiam um status de superstar ao cravar o nome na história do
+            cinema mais badalado do mundo. É nesse cenário em que ocorre a apresentação de Evelyn Hugo, descrita como
+            uma espécie de força da natureza capaz de atrair desejo, inveja, admiração e ódio.</div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/Delilah Green Não esta nem ai.jpg"
+            alt="Delilah Green Não está nem aí">
+          <div class="book-title"><a href="">Delilah Green Não está nem ai</a></div>
+          <div class="book-autor"><a href="#">Ashley Herring Blake</a></div>
+          <div class="book-desc">"Delilah Green não está nem aí", de Ashley Herring Blake, conta a história de Delilah
+            Green, uma fotógrafa em ascensão que se vê obrigada a voltar à sua cidade natal, Bright Falls, para
+            fotografar o casamento de sua irmã postiça, Astrid. Ao reencontrar Claire Sutherland, uma antiga amiga de
+            infância de Astrid, Delilah se vê envolvida em um conflito entre o desejo de esquecer o passado e a
+            possibilidade de um novo amor.</div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/a menina que roubava livros.jpg"
+            alt="A Menina que Roubava Livros">
+          <div class="book-title"><a href="#">A Menina que Roubava Livros</a></div>
+          <div class="book-autor"><a href="#">Markus Zusak</a></div>
+          <div class="book-desc">A trajetória de Liesel Meminger é contada por uma narradora mórbida, surpreendentemente
+            simpática. Ao perceber que a pequena ladra de livros lhe escapa, a Morte afeiçoa-se à menina e rastreia suas
+            pegadas de 1939 a 1943. Traços de uma sobrevivente: a mãe comunista, perseguida pelo nazismo, envia Liesel e
+            o irmão para o subúrbio pobre de uma cidade alemã, onde um casal se dispõe a adotá-los por dinheiro.</div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/Inferno.jpg" alt="Inferno">
+          <div class="book-title"><a href="#">Inferno</a></div>
+          <div class="book-autor"><a href="#">Dan Brown</a></div>
+          <div class="book-desc">De posse de um macabro objeto que Sienna encontrou no paletó de Langdon, os dois têm
+            que seguir uma série inquietante de códigos criada por uma mente brilhante, obcecada tanto pelo fim do mundo
+            quanto por uma das maiores obras-primas literárias de todos os tempos: A Divina Comédia, de Dante Alighieri.
+          </div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/melancia.jpg" alt="Melancia">
+          <div class="book-title"><a href="">Melancia</a></div>
+          <div class="book-autor"><a href="">Marian Keyes</a></div>
+          <div class="book-desc">Melancia é um romance sobre sobrevivência e a arte de manter o bom humor mesmo diante
+            das circunstâncias mais adversas Com 29 anos, uma filha recém-nascida e um marido que acabou de confessar um
+            caso com a vizinha, Claire Walsh se resume a um coração partido e um corpo inteiramente redondo, aparentando
+            uma melancia.</div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/Percy Jackson e Os Deuses Gregos.jpg"
+            alt="Percy Jackson e os Deuses Gregos">
+          <div class="book-title"><a href="#">Percy Jackson e os Deuses Gregos</a></div>
+          <div class="book-autor"><a href="#">Rick Riordan</a></div>
+          <div class="book-desc">"Um editor de Nova York pediu que eu escrevesse o que sei sobre os deuses gregos, e
+            fiquei pensando: “Pode ser anonimamente? Porque não estou a fim de despertar a ira dos olimpianos de novo.”
+            Mas, se assim eu estiver ajudando vocês a conhecer os deuses gregos e a sobreviver caso algum dia eles
+            apareçam na sua frente, então acho que escrever isso tudo vai ser minha boa ação da semana."</div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/Maldosas.jpg" alt="Maldosas">
+          <div class="book-title"><a href="#">Maldosas</a></div>
+          <div class="book-autor"><a href="#">Sarah Shepard</a></div>
+          <div class="book-desc">Todo mundo tem um segredo que, se revelado, pode mudar a vida por completo. As
+            adolescentes Spencer, Aria, Emily e Hanna sempre souberam disso, mesmo antes da melhor amiga delas, Alison,
+            desaparecer misteriosamente. Há detalhes seus que só foram contados a Alison, e elas têm muito medo de que
+            alguém mais os descubra.
+          </div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/O diário de Anne Frank.jpg" alt="O Diário de Anne Frank">
+          <div class="book-title"><a href="#">O Diário de Anne Frank</a></div>
+          <div class="book-autor"><a href="">Anne Frank</a></div>
+          <div class="book-desc">"O Diário de Anne Frank" narra a história da jovem judia Anne Frank e sua família, que
+            se escondem de perseguição nazista em um anexo secreto de uma fábrica em Amsterdão durante a Segunda Guerra
+            Mundial. Anne registra em seu diário suas experiências, sentimentos e pensamentos sobre a guerra, a
+            perseguição e a vida em confinamento. </div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/crepusculo amanhecer.jpg" alt="Crepúsculo - Amanhecer">
+          <div class="book-title"><a href="#">Crepúsculo - Amanhecer</a></div>
+          <div class="book-autor"><a href="">Sarah Shepard</a></div>
+          <div class="book-desc">Em "Amanhecer", o último livro da saga Crepúsculo, Bella e Edward casam-se e partem
+            para lua de mel, onde Bella decide tornar-se imortal para ficar com Edward. Esta decisão traz consequências,
+            como uma gravidez perigosa e a transformação de Bella em vampira. A história segue os desafios de Bella como
+            vampira, a criação de sua filha Renesmee, e a ameaça que a família Cullen enfrenta devido à sua existência,
+            levando a um conflito épico com os Volturi e outros clãs vampiros. </div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/assassinato no expresso do oriente.jpg"
+            alt="Assassinato no Expresso do Oriente">
+          <div class="book-title"><a href="#">Assassinato no Expresso do Oriente</a></div>
+          <div class="book-autor"><a href="">Agatha Christie</a></div>
+          <div class="book-desc">Em meio a uma viagem, Hercule Poirot é surpreendido por um telegrama solicitando seu
+            retorno a Londres. Logo o famoso detetive belga embarca no Expresso do Oriente, que está inesperadamente
+            cheio para aquela época do ano. Pouco após a meia-noite, o excesso de neve nos trilhos obriga o trem a
+            parar, e na manhã seguinte, o corpo de um dos passageiros é encontrado, golpeado por múltiplas facadas.
+            Isolados e com um assassino entre eles, a única solução de Poirot é iniciar uma investigação, reunindo todas
+            as pistas e os suspeitos para chegar à conclusão de quem é o criminoso ― antes que ele faça mais uma vítima.
+          </div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/o diario de bridget jones.jpg" alt="O Diário de Bridget Jones">
+          <div class="book-title"><a href="#">O Diário de Bridget Jones</a></div>
+          <div class="book-autor"><a href="">Helen Fielding</a></div>
+          <div class="book-desc">"O Diário de Bridget Jones", de Helen Fielding, é um romance que narra um ano na vida
+            de Bridget, uma mulher solteira de trinta e poucos anos, moradora de Londres. O livro é escrito na forma de
+            um diário, onde Bridget registra seus pensamentos, lutas e experiências em relação à sua vida amorosa,
+            carreira, peso, vícios e amizades. </div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/o diario de bridget jones.jpg" alt="O Diário de Bridget Jones">
+          <div class="book-title"><a href="#">O Diário de Bridget Jones</a></div>
+          <div class="book-autor"><a href="">Helen Fielding</a></div>
+          <div class="book-desc">"O Diário de Bridget Jones", de Helen Fielding, é um romance que narra um ano na vida
+            de Bridget, uma mulher solteira de trinta e poucos anos, moradora de Londres. O livro é escrito na forma de
+            um diário, onde Bridget registra seus pensamentos, lutas e experiências em relação à sua vida amorosa,
+            carreira, peso, vícios e amizades.</div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/o diario de bridget jones.jpg" alt="O Diário de Bridget Jones">
+          <div class="book-title"><a href="#">O Diário de Bridget Jones</a></div>
+          <div class="book-autor"><a href="">Helen Fielding</a></div>
+          <div class="book-desc">"O Diário de Bridget Jones", de Helen Fielding, é um romance que narra um ano na vida
+            de Bridget, uma mulher solteira de trinta e poucos anos, moradora de Londres. O livro é escrito na forma de
+            um diário, onde Bridget registra seus pensamentos, lutas e experiências em relação à sua vida amorosa,
+            carreira, peso, vícios e amizades.</div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+        <div class="book-card">
+          <img src="./assets/capas-books/listaLeitura/o diario de bridget jones.jpg" alt="O Diário de Bridget Jones">
+          <div class="book-title"><a href="#">O Diário de Bridget Jones</a></div>
+          <div class="book-autor"><a href="">Helen Fielding</a></div>
+          <div class="book-desc">"O Diário de Bridget Jones", de Helen Fielding, é um romance que narra um ano na vida
+            de Bridget, uma mulher solteira de trinta e poucos anos, moradora de Londres. O livro é escrito na forma de
+            um diário, onde Bridget registra seus pensamentos, lutas e experiências em relação à sua vida amorosa,
+            carreira, peso, vícios e amizades.</div>
+          <button class="read-more">Leia Mais</button>
+        </div>
+
+      </div>
+      <div class="ver-mais">
+        <button class="btn-verMais">Ver Mais</button>
+      </div>
+
+    </div>
+
+
+    <div class="conversas-section hidden" id="conversas-section">
+      <div class="content-conversas">
+        <div class="escreverMensagem">
+          <div class="campo-mensagem">
+            <div class="imgPerfil">
+              <img src="./assets/profile-picture/profile-3.jpg" alt="">
+            </div>
+            <div class="caixa-mensagem">
+              <form class="post-mensagem" action="perfil.html" method="post">
+                <textarea class="areaMensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..."></textarea>
+                <button type="submit" class="btn btnPostar">Postar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container-mensagens">
+        <div class="mensagensCard container-mensagem1">
+          <div class="comentario-card card-1">
+            <div class="opcoesMensagem">
+              <span>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
+              <ul class="mensagemOptions">
+                <li>Excluir</li>
+                <li>Denunciar</li>
+              </ul>
+            </div>
+
+            <div class="comentario-cabecalho">
+              <div class="avatar-user">
+                <img src="./assets/profile-picture/profile-5.jpg" alt="">
+              </div>
+              <div class="info-usuario">
+                <span class="user-handle">Thiago Martins</span>
+                <span>postou uma mensagem</span>
+                <span class="resposta-info">· há 1 ano</span>
+              </div>
+            </div>
+
+            <div class="comentario-conteudo">
+              <p class="comentario-text">@marcia agradeço a indicação do livro, gostei bastante. E em contrapartida te indico o livro Os Sete Maridos de Evelyn Hugo acredito que vai gostar bastante.
+              </p>
+              <div class="resposta-info">
+                <button class="responder-btn perfilResponder">Responder</button>
+              </div>
+            </div>
+            <!-- Caixa de resposta -->
+            <div class="caixa-resposta hidden">
+              <div class="avatar-user resposta">
+                <img src="./assets/profile-picture/profile-5.jpg" alt="">
+              </div>
+              <div class="container-resposta">
+                <div class="resposta-inputs">
+                  <textarea placeholder="Adicione uma resposta..." rows="2"></textarea>
+                </div>
+                <div class="botoes-resposta">
+                  <button class="cancelar-btn">Cancelar</button>
+                  <button class="enviar-btn" disabled>Responder</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="comentario-card card-2">
+            <div class="opcoesMensagem">
+              <span>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
+              <ul class="mensagemOptions">
+                <li>Excluir</li>
+                <li>Denunciar</li>
+              </ul>
+            </div>
+
+            <div class="comentario-cabecalho">
+              <div class="avatar-user">
+                <img src="./assets/profile-picture/profile-3.jpg" alt="">
+              </div>
+              <div class="info-usuario">
+                <span class="user-handle">Daniele Savre</span>
+                <span>postou uma mensagem</span>
+                <span class="resposta-info">· há 1 ano</span>
+              </div>
+            </div>
+
+            <div class="comentario-conteudo">
+              <p class="comentario-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae illum odit voluptates ipsa
+                assumenda libero, maxime laudantium reiciendis, praesentium fugit totam molestiae quia non similique ab,
+                ducimus dolorum quis delectus?
+                Agradeço pelas felicitações e pelo livro comprado.Volte sempre.
+              </p>
+              <div class="resposta-info">
+                <button class="responder-btn perfilResponder">Responder</button>
+              </div>
+            </div>
+            <!-- Caixa de resposta -->
+            <div class="caixa-resposta hidden">
+              <div class="avatar-user resposta">
+                <img src="./assets/profile-picture/profile-7.jpg" alt="">
+              </div>
+              <div class="container-resposta">
+                <div class="resposta-inputs">
+                  <textarea placeholder="Adicione uma resposta..." rows="2"></textarea>
+                </div>
+                <div class="botoes-resposta">
+                  <button class="cancelar-btn">Cancelar</button>
+                  <button class="enviar-btn" disabled>Responder</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="comentario-card card-3">
+            <div class="opcoesMensagem">
+              <span>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
+              <ul class="mensagemOptions">
+                <li>Excluir</li>
+                <li>Denunciar</li>
+              </ul>
+            </div>
+
+            <div class="comentario-cabecalho">
+              <div class="avatar-user">
+                <img src="./assets/profile-picture/profile-2.jpg" alt="">
+              </div>
+              <div class="info-usuario">
+                <span class="user-handle">Isabela Martins</span>
+                <span>postou uma mensagem</span>
+                <span class="resposta-info">· há 3 anos</span>
+              </div>
+            </div>
+
+            <div class="comentario-conteudo">
+              <p class="comentario-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste dolorum, dolores nostrum quisquam
+                excepturi blanditiis soluta nisi debitis consectetur eveniet amet odit. Veritatis odit culpa accusamus
+                cum praesentium amet corporis.
+              </p>
+              <div class="resposta-info">
+                <button class="responder-btn perfilResponder">Responder</button>
+              </div>
+            </div>
+            <!-- Caixa de resposta -->
+            <div class="caixa-resposta hidden">
+              <div class="avatar-user resposta">
+                <img src="./assets/profile-picture/profile-1.jpg" alt="">
+              </div>
+              <div class="container-resposta">
+                <div class="resposta-inputs">
+                  <textarea placeholder="Adicione uma resposta..." rows="2"></textarea>
+                </div>
+                <div class="botoes-resposta">
+                  <button class="cancelar-btn">Cancelar</button>
+                  <button class="enviar-btn" disabled>Responder</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-contact">
+        <h3>Contato</h3>
+        <form>
+          <input type="text" placeholder="Seu nome" required>
+          <input type="email" placeholder="Seu e-mail" required>
+          <textarea placeholder="Mensagem" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <div class="footer-info">
+        <h3>Informações</h3>
+        <p><strong>Endereço:</strong> Rua dos Leitores, 123 - Osasco - São Paulo</p>
+        <p><strong>Telefone:</strong> (11) 91234-5678</p>
+        <a href="#">Termos de Serviço</a>
+      </div>
+
+      <div class="footer-social">
+        <h3>Fique por dentro das Novidades</h3>
+        <div class="social-icons">
+          <ul>
+            <li class="face-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li class="twitter-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="linkedin-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="instagram-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="./js/perfil.js"></script>
+  <script src="./js/personalizacao.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LitVerse - Minha Biblioteca</title>
+  <!-- Ícone da página -->
+  <link rel="shortcut icon" href="./assets/favicon.png">
+  <!-- CDN FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!---------------CDN Ionicons Free Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Folha de estilo com variaveis-->
+  <link rel="stylesheet" href="./css/variaveis.css" />
+  <!--Folha de estilo padrão-->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!--Fonte Merriweather e Poppins -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body data-pagina="livro">
+  <header class="container header-biblioteca">
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+    <!-- Camada base (visível em ambos os temas) -->
+        <img src="./assets/logoPNG.png" alt="Logo" class="logo-img logo-base" />
+    <!-- Camada para dark mode (só aparece com data-theme='dark') -->
+        <img src="./assets/LogoLaranjaTransparente.png" alt="Logo" class="logo-img logo-blend" />
+      </a>
+    </div>
+
+
+    <nav class="header-menu">
+      <ul class="menu-header">
+        <li class="pagina-inicial menu-page">
+          <a href="paginaInicial.html">
+            <span class="icon-menu icon-page-home">
+              <i data-lucide="home"></i>
+            </span>
+            <span class="text">Página Inicial</span>
+          </a>
+        </li>
+        <li class="pagina-biblioteca menu-page">
+          <a href="biblioteca.html">
+            <span class="icon-menu icon-page-biblioteca">
+              <i data-lucide="library-big"></i>
+            </span>
+            <span class="text">Biblioteca</span>
+          </a>
+        </li>
+        <li class="pagina-perfil menu-page">
+          <a href="perfil.html">
+            <span class="icon-menu icon-page-perfil">
+              <i data-lucide="user-round-pen"></i>
+            </span>
+            <span class="text">Perfil</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="usuario-config">
+      <button class="btn-notificacoes" id="btnNotific">
+        <i data-lucide="bell-ring"></i>
+      </button>
+
+      <!-- ▼ NOVO dropdown de notificações -->
+      <div class="menu-notificacoes">
+        <div class="menu-notificacoes-wrapper">
+          <div class="menu-notificacoes-detalhado" id="menuNotific">
+            <div class="seta-notificacao"></div>
+            <h4>Notificações</h4>
+            <!----------------Notification Popup-->
+            <div class="notification-popup">
+              <div class="notificacao1 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-2.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Keke Benjamin</b> está seguindo você.
+                  <small class="text-muted">2 dias atrás</small>
+                </div>
+              </div>
+              <div class="notificacao2 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-3.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>John Doe</b> and <b>283 outros</b> comentaram seu post.
+                  <small class="text-muted">1 hora atrás</small>
+                </div>
+              </div>
+              <div class="notificacao3 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-4.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Jack Daniels</b> comentou no seu post.
+                  <small class="text-muted">1 segundo atrás.</small>
+                </div>
+              </div>
+              <div class="notificacao4 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-5.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Madaleine Bostick</b> está seguindo você.
+                  <small class="text-muted">1 semana atrás</small>
+                </div>
+              </div>
+              <div class="notificacao5 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-6.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Mary Jane</b> respondeu seu comentário.
+                  <small class="text-muted">3 dias atrás</small>
+                </div>
+              </div>
+              <div class="notificacao6 notificacao">
+                <div class="profile-photo">
+                  <img src="./assets/profile-picture/profile-7.jpg" />
+                </div>
+                <div class="notification-body">
+                  <b>Iron Man</b> marcou você em um comentário.
+                  <small class="text-muted">8 dias atrás</small>
+                </div>
+              </div>
+            </div>
+            <!--------End Notification Popup---------------->
+          </div>
+        </div>
+      </div>
+      <!-- ▲ Fim do novo dropdown -->
+
+      <button class="btn-config" id="btnConfig">
+        <i data-lucide="bolt"></i>
+      </button>
+
+      <!-- ▼ NOVO dropdown de configurações ▼ -->
+      <div class="menu-config-detalhado" id="menuConfig">
+        <h4>Configurar Página</h4>
+        <div class="menu-lateral">
+          <button><i class="fas fa-adjust"></i> Alternar Tema</button>
+          <button><i class="fas fa-font"></i> Ajustar Fonte</button>
+          <button><i class="fas fa-language"></i> Idioma</button>
+        </div>
+      </div>
+      <!-- ▲ Fim do novo dropdown -->
+
+      <!-- Dropdown do usuário -->
+      <div class="dropdown-usuario">
+        <img src="./assets/icons-cards/user-picture.png" alt="Usuário" class="foto-perfil" id="btnUsuario">
+        <div class="menu-usuario-detalhado" id="menuUsuario">
+          <div class="perfil-topo">
+            <img src="./assets/icons-cards/user-picture.png" alt="Foto do Usuário" class="no-blend">
+            <h4>Jussara Cristina</h4>
+            <p>jussara@email.com</p>
+            <a href="perfil.html">Ver perfil</a>
+          </div>
+          <div class="menu-lateral">
+            <button><i class="fas fa-user"></i> Conta</button>
+            <button><i class="fas fa-key"></i> Trocar Senha</button>
+            <button><i class="fas fa-lock"></i> Privacidade</button>
+            <button><i class="fas fa-trash"></i> Excluir Conta</button>
+          </div>
+          <button class="btn-atualizar">Atualizar Conta</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="main-book visual-livro">
+    <div class="sidebar">
+      <aside class="sidebar sidebar-biblioteca">
+        <nav class="sidebar-biblioteca">
+          <ul>
+            <li class="leituras-atuais menu-sidebar">
+              <a href="#leituras">
+                <span class="icon-leituras">
+                  <i class="fa-solid fa-book-open-reader"></i>
+                </span>
+                <span class="text">Leituras Atuais</span>
+              </a>
+            </li>
+            <li class="meus-arquivos menu-sidebar">
+              <a href="#meus-arquivos">
+                <span class="icon-arquivos">
+                  <i class="fa-regular fa-folder-open"></i>
+                </span>
+                <span class="text">Meus Arquivos</span>
+              </a>
+            </li>
+            <li class="para-terminar menu-sidebar"">
+            <a href=" #para-terminar">
+              <span class="icon-incompletos">
+                <i class="fa-solid fa-hourglass-start"></i>
+              </span>
+              <span class="text">Para Terminar</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <!---------------------------------Drawer que aparece ao clicar em ver Capitulos--------------->
+    <aside id="drawerCapitulos" class="drawer-capitulos">
+      <div class="drawer-header">
+        <h3>Capítulos</h3>
+        <button id="fecharDrawer" class="btn-fechar"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul class="lista-capitulos">
+        <li>Capítulo 01 - Introdução</li>
+        <li>Capítulo 02 - Desenvolvimento</li>
+        <li>Capítulo 03 - Conclusão</li>
+        <!-- ... -->
+      </ul>
+    </aside>
+
+    <!-- Overlay -->
+    <div id="overlayDrawer" class="overlay-drawer"></div>
+
+    <!-------------------------------------Menus da header da página tela esquerda e superior------------------------
+    -------------------------------------------------------------------------------------------------------------->
+    <div class="page-content-livro">
+      <div class="barraFuncoesToggle">
+        <div class="setinha-voltar back">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="biblioteca-options page-book">
+          <!-------------Botão Toggle  - Change color -->
+          <div class="toggle-switch">
+            <label for="theme" class="theme">
+                <span>Light</span>
+                <span class="theme__toggle-wrap">
+                  <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                  <span class="theme__fill"></span>
+                  <span class="theme__icon">
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                  </span>
+                </span>
+                <span>Dark</span>
+            </label>
+          </div>
+
+          <!------------------------Botões de funções Upload e Share------------------------------------>
+          <button class="share-btn btn-funcoes" title="Compartilhar">
+            <i class="fa-solid fa-share-nodes"></i>
+          </button>
+          <button class="remover-btn btn-funcoes" title="Remover da Biblioteca">
+            <i class="fa-solid fa-minus"></i>
+            <span>Remover da Biblioteca</span>
+          </button>
+          <button class="add-btn btn-funcoes" title="Adicionar a Biblioteca">
+            <i class="fa-solid fa-plus"></i>
+            <span>Adicionar à Biblioteca</span>
+          </button>
+          <button class="options-btn btn-funcoes" title="Mais opções">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-------------------------------------------Conteúdo Principal da Página Imagem---------------------------------------->
+      <div class="hero-content-bookLivro">
+        <div class="hero-bg-livro">
+          <div class="overlay-livro">
+            <div class="header-livro">
+              <div class="titulo-livro">
+                <div class="errolivro" id="mensagemErro"></div>
+                <h1 id="tituloLivro">American Idiot</h1>
+                <p class="autor-livro" id="autorLivro">Green Day</p>
+                <div class="descricao-livro">
+                    <p id="descricao" class="descricao-leitura collapsed"> </p>
+                    <button class="read-more">Leia Mais</button>
+                </div>
+                <div class="action-book">
+                    <a class="btn-action visualizar btn" href="paginaLeitura.html">
+                      <i class="fa-solid fa-eye"></i>
+                        <span>Visualizar</span>
+                    </a>
+
+                    <button id="btnVerCapitulos" class="btn-action visualizar btn">
+                      <i class="fa-solid fa-bars"></i>
+                      <span>Ver Capítulos</span>
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <section class="feedback">
+        <div class="tabs-book">
+          <button class="tab active avaliacoes">
+            <span>Avaliações</span>
+          </button>
+          <button class="tab comentarios">
+            <span>Comentários</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="feedbakCards">
+        <div class="avaliation-card card-chapter1">
+          <div class="container-img-card">
+            <img src="./assets/imagens-capitulos/ImagemCapitulo1-Black.png" data-nome-base="ImagemCapitulo1" class="chapter-img">
+          </div>
+          <div class="card-content">
+            <div class="header-feedback-chapter">
+              <span class="title-card">Capítulo 01</span>
+              <div class="icon-stars">
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+              </div>
+            </div>
+            <div class="data-avaliacao">
+              <span>Lido • 08/05/2025 • 40 minutos de leitura</span>
+              <div class="info-extra">Supporting line text lorem ipsum dolor sit amet, consectetur.</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="avaliation-card card-chapter2">
+          <div class="container-img-card">
+            <img src="./assets/imagens-capitulos/ImagemCapitulo1-Black.png" data-nome-base="ImagemCapitulo2" class="chapter-img">
+          </div>
+          <div class="card-content">
+            <div class="header-feedback-chapter">
+              <span class="title-card">Capítulo 02</span>
+              <div class="icon-stars">
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+              </div>
+            </div>
+            <div class="data-avaliacao">
+              <span>Lido • Hoje • 5 minutos de leitura</span>
+              <div class="info-extra">Supporting line text lorem ipsum dolor sit amet, consectetur.</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="avaliation-card card-chapter3">
+          <div class="container-img-card">
+            <img src="./assets/imagens-capitulos/ImagemCapitulo1-Black.png" data-nome-base="ImagemCapitulo3" class="chapter-img">
+          </div>
+          <div class="card-content">
+            <div class="header-feedback-chapter">
+              <span class="title-card">Capítulo 03</span>
+              <div class="icon-stars">
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+              </div>
+            </div>
+            <div class="data-avaliacao">
+              <span>Lido • 12/05/25 • 5 minutos de leitura</span>
+              <div class="info-extra">Supporting line text lorem ipsum dolor sit amet, consectetur.</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="avaliation-card card-chapter4">
+          <div class="container-img-card">
+            <img src="./assets/imagens-capitulos/ImagemCapitulo1-Black.png" data-nome-base="ImagemCapitulo4" class="chapter-img">
+          </div>
+          <div class="card-content">
+            <div class="header-feedback-chapter">
+              <span class="title-card">Capítulo 04</span>
+              <div class="icon-stars">
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+              </div>
+            </div>
+            <div class="data-avaliacao">
+              <span>Lido • 18/04/2025 • 5 minutos de leitura</span>
+              <div class="info-extra">Supporting line text lorem ipsum dolor sit amet, consectetur.</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="avaliation-card card-chapter5">
+          <div class="container-img-card">
+            <img src="./assets/imagens-capitulos/ImagemCapitulo1-Black.png" data-nome-base="ImagemCapitulo5" class="chapter-img">
+          </div>
+          <div class="card-content">
+            <div class="header-feedback-chapter">
+              <span class="title-card">Capítulo 05</span>
+              <div class="icon-stars">
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+                <span class="material-icons">star_rate</span>
+              </div>
+            </div>
+            <div class="data-avaliacao">
+              <span>Lido • 10/09/2024 • 5 minutos de leitura</span>
+              <div class="info-extra">Supporting line text lorem ipsum dolor sit amet, consectetur.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Você pode duplicar esse bloco acima pros capítulos 3, 4 etc -->
+      </section>
+      <section class="comentariosCards hidden">
+        <!----------------------------Primeiro Comentário---------------->
+        <div class="comentario-card card-1">
+          <div class="comentario-cabecalho">
+            <div class="avatar-user">
+              <img src="./assets/profile-picture/profile-1.jpg" alt="">
+            </div>
+            <div class="info-usuario">
+              <span class="user-handle">Maria Luiza</span>
+              <span class="resposta-info">· há 1 ano</span>
+            </div>
+          </div>
+          <div class="comentario-conteudo">
+            <p>Pior é eles pensarem q aqui no Brasil realmente comemos só pizza de palmito e baiana...
+              pizzas mais comuns do Brasil são: calabresa, frango catupiry, 4 queijos, portuguesa e Marguerita.
+            </p>
+            <div class="resposta-info">
+              <div class="like-info">
+                <span class="icone-like icon-reactions">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </span>
+                <span class="contador-like">1.000</span>
+                <span class="icone-dislike icon-reactions">
+                  <i class="fa-solid fa-thumbs-down"></i>
+                </span>
+                <span class="contador-like">80</span>
+              </div>
+              <span class="responder-btn">Responder</span>
+            </div>
+          </div>
+          <!-- Caixa de resposta -->
+          <div class="caixa-resposta hidden">
+            <div class="avatar-user resposta">
+              <img src="./assets/profile-picture/profile-2.jpg" alt="">
+            </div>
+            <div class="container-resposta">
+              <div class="resposta-inputs">
+                <textarea placeholder="Adicione uma resposta..." rows="2"></textarea>
+              </div>
+              <div class="botoes-resposta">
+                <button class="cancelar-btn">Cancelar</button>
+                <button class="enviar-btn" disabled>Responder</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!----------------------------Segundo Comentário-------------------->
+        <div class="comentario-card card-2">
+          <div class="comentario-cabecalho">
+            <div class="avatar-user">
+              <img src="./assets/profile-picture/profile-3.jpg" alt="">
+            </div>
+            <div class="info-usuario">
+              <span class="user-handle">Maria Luiza</span>
+              <span class="resposta-info">· há 1 ano</span>
+            </div>
+          </div>
+          <div class="comentario-conteudo">
+            <p>Pior é eles pensarem q aqui no Brasil realmente comemos só pizza de palmito e baiana...
+              pizzas mais comuns do Brasil são: calabresa, frango catupiry, 4 queijos, portuguesa e Marguerita.
+            </p>
+            <div class="resposta-info">
+              <div class="like-info">
+                <span class="icone-like icon-reactions">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </span>
+                <span class="contador-like">1.000</span>
+                <span class="icone-dislike icon-reactions">
+                  <i class="fa-solid fa-thumbs-down"></i>
+                </span>
+                <span class="contador-like">80</span>
+              </div>
+              <span class="responder-btn">Responder</span>
+            </div>
+          </div>
+          <!-- Caixa de resposta -->
+          <div class="caixa-resposta hidden">
+            <div class="avatar-user resposta">
+              <img src="./assets/profile-picture/profile-4.jpg" alt="">
+            </div>
+            <div class="container-resposta">
+              <div class="resposta-inputs">
+                <textarea placeholder="Adicione uma resposta..." rows="2"></textarea>
+              </div>
+              <div class="botoes-resposta">
+                <button class="cancelar-btn">Cancelar</button>
+                <button class="enviar-btn" disabled>Responder</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!----------------------------Terceiro Comentário----------------------->
+        <div class="comentario-card card-3">
+          <div class="comentario-cabecalho">
+            <div class="avatar-user">
+              <img src="./assets/profile-picture/profile-5.jpg" alt="">
+            </div>
+            <div class="info-usuario">
+              <span class="user-handle">Maria Luiza</span>
+              <span class="resposta-info">· há 1 ano</span>
+            </div>
+          </div>
+          <div class="comentario-conteudo">
+            <p>Pior é eles pensarem q aqui no Brasil realmente comemos só pizza de palmito e baiana...
+              pizzas mais comuns do Brasil são: calabresa, frango catupiry, 4 queijos, portuguesa e Marguerita.
+            </p>
+            <div class="resposta-info">
+              <div class="like-info">
+                <span class="icone-like icon-reactions">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </span>
+                <span class="contador-like">1.000</span>
+                <span class="icone-dislike icon-reactions">
+                  <i class="fa-solid fa-thumbs-down"></i>
+                </span>
+                <span class="contador-like">80</span>
+              </div>
+              <span class="responder-btn">Responder</span>
+            </div>
+          </div>
+          <!-- Caixa de resposta -->
+          <div class="caixa-resposta hidden">
+            <div class="avatar-user resposta">
+              <img src="./assets/profile-picture/profile-6.jpg" alt="">
+            </div>
+            <div class="container-resposta">
+              <div class="resposta-inputs">
+                <textarea placeholder="Adicione uma resposta..." rows="2"></textarea>
+              </div>
+              <div class="botoes-resposta">
+                <button class="cancelar-btn">Cancelar</button>
+                <button class="enviar-btn" disabled>Responder</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-contact">
+        <h3>Contato</h3>
+        <form>
+          <input type="text" placeholder="Seu nome" required>
+          <input type="email" placeholder="Seu e-mail" required>
+          <textarea placeholder="Mensagem" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <div class="footer-info">
+        <h3>Informações</h3>
+        <p><strong>Endereço:</strong> Rua dos Leitores, 123 - Osasco - São Paulo</p>
+        <p><strong>Telefone:</strong> (11) 91234-5678</p>
+        <a href="#">Termos de Serviço</a>
+      </div>
+
+      <div class="footer-social">
+        <h3>Fique por dentro das Novidades</h3>
+        <div class="social-icons">
+          <ul>
+            <li class="face-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li class="twitter-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li class="linkedin-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="instagram-icon">
+              <a href="#">
+                <i class="icon fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="./js/livro.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/personalizacao.js"></script>
+</body>
+
+</html>
